@@ -1,0 +1,9 @@
+services:
+  backend:
+    image: kofta/test-app
+    ports:
+      - 8080:8080
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
